@@ -1,0 +1,34 @@
+# Session logs and temporary files
+memory/*.md
+memory/heartbeat-state.json
+*.log
+*.tmp
+*.temp
+
+# Sensitive configuration
+*.key
+*.pem
+*.crt
+.env
+.env.local
+
+# Node modules and build artifacts
+node_modules/
+dist/
+build/
+*.exe
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Clawdbot specific
+canvas/
+session-*
+transcript-*
