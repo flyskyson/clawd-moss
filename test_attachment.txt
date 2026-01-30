@@ -1,0 +1,4 @@
+这是一个测试附件文件
+发送时间：$(date)
+来自：Clawdbot BlueBubbles 测试
+用途：验证附件发送功能
