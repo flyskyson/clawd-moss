@@ -1,0 +1,80 @@
+{
+  "name": "飞天主人每日新闻订阅",
+  "version": "1.0",
+  "created": "2026-01-31",
+  "description": "为飞天主人定制的每日新闻订阅服务",
+  
+  "schedule": {
+    "morning": "0 9 * * *",
+    "afternoon": "0 15 * * *",
+    "evening": "0 21 * * *",
+    "timezone": "Asia/Shanghai"
+  },
+  
+  "content": {
+    "categories": [
+      "科技动态",
+      "AI技术",
+      "重大新闻", 
+      "热点事件",
+      "财经要闻",
+      "AI Agent动态",
+      "Clawdbot相关"
+    ],
+    
+    "sources": {
+      "tech": [
+        "36氪",
+        "虎嗅",
+        "InfoQ",
+        "TechCrunch",
+        "The Verge",
+        "Wired"
+      ],
+      "ai": [
+        "机器之心",
+        "AI科技评论",
+        "OpenAI博客",
+        "Anthropic博客",
+        "Google AI博客"
+      ],
+      "general": [
+        "人民日报",
+        "新华社",
+        "BBC",
+        "CNN",
+        "Reuters"
+      ],
+      "finance": [
+        "华尔街见闻",
+        "财新网",
+        "Bloomberg",
+        "Financial Times"
+      ]
+    },
+    
+    "format": {
+      "items_per_session": 7,
+      "summary_length": "段落简介",
+      "include_links": true,
+      "include_source": true,
+      "categorize": true
+    }
+  },
+  
+  "delivery": {
+    "channel": "feishu",
+    "target": "ou_8924c5894c324474511b00980af769ee",
+    "format": "markdown",
+    "interactive": true
+  },
+  
+  "search_queries": {
+    "morning": "最新科技新闻 AI技术动态 今日重大新闻 财经要闻",
+    "afternoon": "科技热点 AI进展 下午新闻 市场动态",
+    "evening": "晚间新闻 科技总结 AI突破 明日展望"
+  },
+  
+  "status": "pending_api_fix",
+  "notes": "等待web_search API修复后启用完整功能"
+}

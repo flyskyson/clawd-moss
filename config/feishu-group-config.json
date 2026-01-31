@@ -1,0 +1,36 @@
+{
+  "group_id": "oc_a0553eda9014c201e6f6dbd88a00f0b4",
+  "group_name": "Clawdbot角色发展实验室",
+  "created_at": "2026-02-01T00:00:00Z",
+  "description": "多角色AI协作实验平台，探索AI性格发展和团队协作",
+  "webhook_url": "",
+  "roles": {
+    "leader": {
+      "display_name": "领航者",
+      "description": "战略导向的领导者",
+      "emoji": "🚀"
+    },
+    "thinker": {
+      "display_name": "哲思者",
+      "description": "深度思考的分析师",
+      "emoji": "💡"
+    },
+    "executor": {
+      "display_name": "实干家",
+      "description": "高效执行的行动者",
+      "emoji": "⚡"
+    },
+    "coordinator": {
+      "display_name": "和谐者",
+      "description": "促进协作的协调专家",
+      "emoji": "🤝"
+    }
+  },
+  "settings": {
+    "daily_rotation": true,
+    "rotation_schedule": "00:00",
+    "topic_generation": "auto",
+    "task_collaboration": true,
+    "self_reflection": true
+  }
+}

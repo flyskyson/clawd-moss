@@ -1,0 +1,47 @@
+[
+{"skill":"github","test":"文件完整性","status":"PASS","message":"SKILL.md文件完整，      47行，包含Frontmatter","timestamp":"2026-01-31T16:34:24+08:00"}
+,
+{"skill":"brave-search","test":"文件完整性","status":"PASS","message":"SKILL.md文件完整，      57行，包含Frontmatter","timestamp":"2026-01-31T16:34:24+08:00"}
+,
+{"skill":"web-search","test":"文件完整性","status":"FAIL","message":"SKILL.md文件过小或可能损坏","timestamp":"2026-01-31T16:34:24+08:00"}
+,
+{"skill":"notes-pkm","test":"文件完整性","status":"FAIL","message":"SKILL.md文件过小或可能损坏","timestamp":"2026-01-31T16:34:24+08:00"}
+,
+{"skill":"note-taking","test":"文件完整性","status":"FAIL","message":"SKILL.md文件过小或可能损坏","timestamp":"2026-01-31T16:34:24+08:00"}
+,
+{"skill":"process-watch","test":"文件完整性","status":"PASS","message":"SKILL.md文件完整，      97行，包含Frontmatter","timestamp":"2026-01-31T16:34:24+08:00"}
+,
+{"skill":"system-monitor","test":"文件完整性","status":"FAIL","message":"SKILL.md文件过小或可能损坏","timestamp":"2026-01-31T16:34:24+08:00"}
+,
+{"skill":"github","test":"GitHub CLI","status":"WARN","message":"gh未安装，需要安装后才能使用","timestamp":"2026-01-31T16:34:24+08:00"}
+,
+{"skill":"brave-search","test":"Node.js运行时","status":"PASS","message":"node已安装: v24.13.0","timestamp":"2026-01-31T16:34:24+08:00"}
+,
+{"skill":"brave-search","test":"Node包管理器","status":"PASS","message":"npm已安装: 11.6.2","timestamp":"2026-01-31T16:34:24+08:00"}
+,
+{"skill":"process-watch","test":"进程查看工具","status":"PASS","message":"ps已安装: ","timestamp":"2026-01-31T16:34:24+08:00"}
+,
+{"skill":"system-monitor","test":"系统监控工具","status":"PASS","message":"top已安装: ","timestamp":"2026-01-31T16:34:24+08:00"}
+,
+{"skill":"brave-search","test":"API配置","status":"WARN","message":"Brave API密钥为测试值，需要替换为真实密钥","timestamp":"2026-01-31T16:34:24+08:00"}
+,
+{"skill":"github","test":"API配置","status":"WARN","message":"GitHub令牌未配置，部分功能可能受限","timestamp":"2026-01-31T16:34:24+08:00"}
+,
+{"skill":"github","test":"命令模拟","status":"INFO","message":"支持命令: gh repo","timestamp":"2026-01-31T16:34:24+08:00"}
+,
+{"skill":"github","test":"命令模拟","status":"INFO","message":"支持命令: gh issue","timestamp":"2026-01-31T16:34:24+08:00"}
+,
+{"skill":"github","test":"命令模拟","status":"INFO","message":"支持命令: gh pr","timestamp":"2026-01-31T16:34:24+08:00"}
+,
+{"skill":"brave-search","test":"功能模拟","status":"INFO","message":"支持命令: brave-search '查询内容'","timestamp":"2026-01-31T16:34:24+08:00"}
+,
+{"skill":"web-search","test":"功能模拟","status":"INFO","message":"支持命令: web-search '查询内容'","timestamp":"2026-01-31T16:34:24+08:00"}
+,
+{"skill":"notes-pkm","test":"功能模拟","status":"INFO","message":"支持命令: notes-pkm [categorize|search|list]","timestamp":"2026-01-31T16:34:24+08:00"}
+,
+{"skill":"note-taking","test":"功能模拟","status":"INFO","message":"支持命令: note-taking '内容'","timestamp":"2026-01-31T16:34:24+08:00"}
+,
+{"skill":"process-watch","test":"功能模拟","status":"INFO","message":"支持命令: process-watch [--cpu|--memory|--disk|--network]","timestamp":"2026-01-31T16:34:24+08:00"}
+,
+{"skill":"system-monitor","test":"功能模拟","status":"INFO","message":"支持命令: system-monitor [--all|--quick|--alert]","timestamp":"2026-01-31T16:34:24+08:00"}
+]

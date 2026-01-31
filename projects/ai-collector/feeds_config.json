@@ -1,0 +1,63 @@
+{
+  "feeds": [
+    {
+      "name": "MIT Technology Review AI",
+      "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
+      "category": "技术媒体",
+      "enabled": true,
+      "priority": 1
+    },
+    {
+      "name": "AI Trends",
+      "url": "https://aitrends.com/feed/",
+      "category": "专业媒体",
+      "enabled": true,
+      "priority": 2
+    },
+    {
+      "name": "VentureBeat AI",
+      "url": "https://venturebeat.com/category/ai/feed/",
+      "category": "科技媒体",
+      "enabled": true,
+      "priority": 3
+    },
+    {
+      "name": "AI News",
+      "url": "https://artificialintelligence-news.com/feed/",
+      "category": "AI资讯",
+      "enabled": true,
+      "priority": 4
+    },
+    {
+      "name": "Synced AI",
+      "url": "https://syncedreview.com/category/ai/feed/",
+      "category": "AI资讯",
+      "enabled": true,
+      "priority": 5
+    },
+    {
+      "name": "The Batch (备用)",
+      "url": "https://www.deeplearning.ai/the-batch/feed/",
+      "category": "教育机构",
+      "enabled": false,
+      "priority": 6,
+      "notes": "解析失败，暂时禁用"
+    },
+    {
+      "name": "OpenAI Blog (备用)",
+      "url": "https://openai.com/blog/rss/",
+      "category": "公司博客",
+      "enabled": false,
+      "priority": 7,
+      "notes": "解析失败，暂时禁用"
+    },
+    {
+      "name": "Google AI Blog (备用)",
+      "url": "https://ai.googleblog.com/feeds/posts/default",
+      "category": "公司博客",
+      "enabled": false,
+      "priority": 8,
+      "notes": "SSL错误，暂时禁用"
+    }
+  ]
+}

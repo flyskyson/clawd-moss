@@ -1,0 +1,53 @@
+{
+  "timestamp": "2026-01-31T16:28:39.265492",
+  "total_skills": 5,
+  "skills": [
+    {
+      "skill": "github",
+      "status": "ready",
+      "examples": [
+        "gh repo view clawdbot/clawdbot --json name,description,stargazersCount",
+        "gh issue list --repo clawdbot/clawdbot --limit 5",
+        "gh pr list --repo clawdbot/clawdbot --limit 3 --state all"
+      ]
+    },
+    {
+      "skill": "search",
+      "status": "needs_config",
+      "examples": [
+        "brave-search 'AI技术最新进展'",
+        "web-search '机器学习趋势 2026'",
+        "# 需要配置API密钥后使用"
+      ]
+    },
+    {
+      "skill": "notes",
+      "status": "ready",
+      "examples": [
+        "note-taking '灵感记录: {内容}'",
+        "notes-pkm categorize --tag 'AI学习'",
+        "notes-pkm search '关键词'"
+      ]
+    },
+    {
+      "skill": "monitor",
+      "status": "ready",
+      "examples": [
+        "process-watch --cpu --memory",
+        "system-monitor --all",
+        "process-watch --disk --network"
+      ]
+    },
+    {
+      "skill": "integration",
+      "status": "example_created",
+      "script": "scripts/ai-learning-daily.sh"
+    }
+  ],
+  "recommendations": [
+    "立即配置搜索技能API密钥",
+    "测试GitHub技能与现有仓库集成",
+    "将笔记技能集成到知识管理系统",
+    "设置系统监控告警阈值"
+  ]
+}

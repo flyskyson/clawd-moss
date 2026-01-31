@@ -1,0 +1,36 @@
+{
+  "feishu": {
+    "enabled": true,
+    "target": "ou_8924c5894c324474511b00980af769ee",
+    "format": "markdown",
+    "split_messages": true,
+    "max_length": 2000,
+    "include_summary": true,
+    "include_details": true
+  },
+  "schedules": {
+    "morning": {
+      "send": true,
+      "delay_minutes": 5
+    },
+    "afternoon": {
+      "send": true,
+      "delay_minutes": 5
+    },
+    "evening": {
+      "send": true,
+      "delay_minutes": 5
+    }
+  },
+  "content": {
+    "max_articles": 7,
+    "include_source": true,
+    "include_time": true,
+    "categories": ["科技", "AI", "财经", "热点"]
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "logs/news-sender.log",
+    "max_size_mb": 10
+  }
+}

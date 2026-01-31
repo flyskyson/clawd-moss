@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clawdbot学习指南</title>
+    <style>
+        body { font-family: -apple-system, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: 0 auto; background: #f8f9fa; }
+        h1 { color: #1a73e8; border-bottom: 2px solid #1a73e8; padding-bottom: 10px; }
+        h2 { color: #34a853; margin-top: 30px; padding-bottom: 5px; border-bottom: 1px solid #ddd; }
+        h3 { color: #ea4335; margin-top: 20px; }
+        h4 { color: #fbbc04; margin-top: 15px; }
+        p { margin: 10px 0; }
+        code { background: #e8f0fe; padding: 2px 6px; border-radius: 4px; font-family: 'Menlo', monospace; color: #1a73e8; }
+        pre { background: #202124; color: #e8eaed; padding: 15px; border-radius: 8px; overflow: auto; margin: 15px 0; }
+        .note { background: #e8f0fe; padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #1a73e8; }
+        .warning { background: #fce8e6; padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #ea4335; }
+        .success { background: #e6f4ea; padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #34a853; }
+        ul, ol { margin: 10px 0 10px 20px; }
+        li { margin: 5px 0; }
+        a { color: #1a73e8; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .header { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .content { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .footer { text-align: center; margin-top: 30px; color: #5f6368; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🤖 Clawdbot学习指南</h1>
+        <p><strong>为飞天主人定制</strong> · 生成时间：2026-01-31 14:03</p>
+        <p>📱 <em>优化用于iPad阅读</em> · ⏰ <em>阅读时间约30分钟</em></p>
+    </div>
+    <div class="content">
+<h1>🦞 Clawdbot/OpenClaw 学习指南
+
+<p>**创建时间**：2026-01-31  </p>
+<p>**创建人**：MOSS  </p>
+<p>**为谁创建**：飞天主人  </p>
+<p>**最后更新**：2026-01-31</p>
+
+<h2>📖 目录
+<p>1. [项目概述](#项目概述)</p>
+<p>2. [核心概念](#核心概念)</p>
+<p>3. [安装指南](#安装指南)</p>
+<p>4. [配置教程](#配置教程)</p>
+<p>5. [使用指南](#使用指南)</p>
+<p>6. [安全配置](#安全配置)</p>
+<p>7. [故障排除](#故障排除)</p>
+<p>8. [最佳实践](#最佳实践)</p>
+<p>9. [资源链接](#资源链接)</p>
+
+<p>---</p>
+
+<h2>1. 项目概述
+
+<h3>什么是Clawdbot/OpenClaw？
+<p>**OpenClaw**（也称为Clawdbot）是一个**个人AI助手**，运行在您自己的设备上。它可以在您已经使用的通信渠道上回答您（WhatsApp、Telegram、Slack、Discord、Google Chat、Signal、iMessage、Microsoft Teams、WebChat），以及扩展渠道如BlueBubbles、Matrix、Zalo等。</p>
+
+<h3>核心特点
+<li>**本地优先**：数据和控制权在您手中
+<li>**多渠道支持**：集成多种即时通讯平台
+<li>**语音功能**：支持macOS/iOS/Android的语音唤醒和对话
+<li>**可视化界面**：实时Canvas画布控制
+<li>**工具丰富**：浏览器控制、节点管理、定时任务等
+<li>**技能平台**：可扩展的技能系统
+
+<h3>项目状态
+<li>**GitHub仓库**：https://github.com/openclaw/openclaw
+<li>**官方文档**：https://docs.openclaw.ai
+<li>**社区**：https://discord.gg/clawd
+<li>**最新版本**：2026.1.24-3（截至2026年1月31日）
+
+<p>---</p>
+
+<h2>2. 核心概念
+
+<h3>2.1 架构组件
+
+<code></code>`
+<p>┌─────────────────────────────────────┐</p>
+<p>│           通信渠道                  │</p>
+<p>│ WhatsApp/Telegram/Slack/Discord等   │</p>
+<p>└──────────────┬──────────────────────┘</p>
+<p>               │</p>
+<p>               ▼</p>
+<p>┌─────────────────────────────────────┐</p>
+<p>│             网关(Gateway)            │</p>
+<p>│       控制平面，WS服务端口           │</p>
+<p>│       默认：ws://127.0.0.1:18789    │</p>
+<p>└──────────────┬──────────────────────┘</p>
+<p>               │</p>
+<p>               ├─ AI代理 (Pi agent)</p>
+<p>               ├─ CLI工具</p>
+<p>               ├─ WebChat UI</p>
+<p>               ├─ macOS应用</p>
+<p>               └─ iOS/Android节点</p>
+<code></code>`
+
+<h3>2.2 关键概念
+<li>**网关(Gateway)**：控制中心，管理所有会话、渠道和工具
+<li>**会话(Session)**：AI代理的运行环境，分为主会话和隔离会话
+<li>**渠道(Channel)**：通信平台集成（如飞书、Telegram等）
+<li>**节点(Node)**：设备客户端（macOS应用、iOS/Android应用）
+<li>**技能(Skill)**：可扩展的功能模块
+<li>**Canvas**：可视化工作空间
+
+<h3>2.3 开发渠道
+<li>**stable**：稳定版（推荐生产使用）
+<li>**beta**：测试版
+<li>**dev**：开发版
+
+<p>---</p>
+
+<h2>3. 安装指南
+
+<h3>3.1 系统要求
+<li>**运行时**：Node.js ≥ 22
+<li>**操作系统**：macOS、Linux、Windows（通过WSL2）
+<li>**包管理器**：npm、pnpm或bun
+
+<h3>3.2 推荐安装方式
+<code></code>`bash
+<h1>使用npm安装
+<p>npm install -g openclaw@latest</p>
+
+<h1>或使用pnpm
+<p>pnpm add -g openclaw@latest</p>
+<code></code>`
+
+<h3>3.3 初始化设置
+<code></code>`bash
+<h1>运行设置向导（推荐）
+<p>openclaw onboard --install-daemon</p>
+</div><div class="footer"><p>📚 学习愉快！ · 🤝 MOSS为您服务 · 🔄 更多内容请查看完整文档</p></div></body></html>

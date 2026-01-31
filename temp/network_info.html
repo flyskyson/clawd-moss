@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>网络连接指南</title>
+    <style>
+        body { font-family: -apple-system, sans-serif; padding: 20px; }
+        .container { max-width: 600px; margin: 0 auto; }
+        .step { background: white; padding: 20px; border-radius: 10px; margin: 15px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .success { border-left: 5px solid #34a853; }
+        .warning { border-left: 5px solid #fbbc04; }
+        .error { border-left: 5px solid #ea4335; }
+        code { background: #f1f3f4; padding: 2px 6px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📡 网络连接指南</h1>
+        
+        <div class="step success">
+            <h2>✅ 步骤1：确认网络</h2>
+            <p>请确保您的iPad和Mac mini连接<strong>同一个WiFi网络</strong>。</p>
+        </div>
+        
+        <div class="step warning">
+            <h2>🔍 步骤2：查找IP地址</h2>
+            <p>在Mac mini上查看IP地址：</p>
+            <ol>
+                <li>打开<strong>系统设置</strong></li>
+                <li>进入<strong>网络</strong></li>
+                <li>查看<strong>WiFi</strong>或<strong>以太网</strong></li>
+                <li>找到<strong>IP地址</strong>（通常是192.168.x.x）</li>
+            </ol>
+        </div>
+        
+        <div class="step">
+            <h2>🌐 步骤3：访问学习指南</h2>
+            <p>在iPad Safari中输入：</p>
+            <code>http://[Mac-IP]:8080/guide_simple.html</code>
+            <p>将<strong>[Mac-IP]</strong>替换为实际的IP地址。</p>
+        </div>
+        
+        <div class="step error">
+            <h2>🔄 备用方案</h2>
+            <p>如果网络不通，请告诉我：</p>
+            <ul>
+                <li><strong>"网络不通"</strong> - 我分段发送内容</li>
+                <li><strong>"换方案"</strong> - 选择其他阅读方式</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+{
+  "timestamp": "2026-01-31T16:37:38.719900",
+  "approval_status": "✅ 完全批准",
+  "skills": [
+    {
+      "skill": "github",
+      "status": "PASS",
+      "lines": 48
+    },
+    {
+      "skill": "brave-search",
+      "status": "PASS",
+      "lines": 58
+    },
+    {
+      "skill": "web-search",
+      "status": "PASS",
+      "lines": 133
+    },
+    {
+      "skill": "notes-pkm",
+      "status": "PASS",
+      "lines": 69
+    },
+    {
+      "skill": "note-taking",
+      "status": "PASS",
+      "lines": 121
+    },
+    {
+      "skill": "process-watch",
+      "status": "PASS",
+      "lines": 98
+    },
+    {
+      "skill": "system-monitor-community",
+      "status": "PASS",
+      "lines": 165
+    }
+  ],
+  "dependencies": [
+    {
+      "tool": "python3",
+      "status": "PASS",
+      "version": "Python 3.9.6"
+    },
+    {
+      "tool": "node",
+      "status": "PASS",
+      "version": "v24.13.0"
+    },
+    {
+      "tool": "ps",
+      "status": "PASS"
+    },
+    {
+      "tool": "top",
+      "status": "PASS"
+    },
+    {
+      "tool": "df",
+      "status": "PASS"
+    }
+  ],
+  "configurations": [
+    {
+      "config": "BRAVE_API_KEY",
+      "status": "WARN",
+      "value": "test_key"
+    },
+    {
+      "config": "GITHUB_TOKEN",
+      "status": "WARN",
+      "value": null
+    }
+  ]
+}
