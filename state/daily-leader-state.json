@@ -1,0 +1,12 @@
+{
+  "last_rotation": "2026-02-01",
+  "current_leader": "leader",
+  "rotation_history": [
+    {
+      "date": "2026-02-01",
+      "from": "coordinator",
+      "to": "leader"
+    }
+  ],
+  "next_rotation": ""
+}

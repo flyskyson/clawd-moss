@@ -1,0 +1,24 @@
+{
+  "task_id": "test-task-001",
+  "task_title": "测试任务：编写项目总结报告",
+  "task_file": "tasks/test-task-001.md",
+  "main_assignee": "thinker",
+  "collaborators": "leader,executor",
+  "priority": "中",
+  "deadline": "未指定",
+  "status": "completed",
+  "assigned_at": "2026-01-31T23:24:27Z",
+  "progress": 100,
+  "updates": [
+    {
+      "timestamp": "2026-01-31T23:24:35Z",
+      "progress": 50,
+      "message": "已完成项目背景和技术架构部分"
+    },
+    {
+      "timestamp": "2026-01-31T23:24:39Z",
+      "progress": 100,
+      "message": "任务完成"
+    }
+  ]
+}

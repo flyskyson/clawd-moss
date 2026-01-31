@@ -1,0 +1,37 @@
+{
+  "total_tasks": 3,
+  "completed_tasks": 1,
+  "active_tasks": [
+    {
+      "id": "test-task-001",
+      "title": "测试任务：编写项目总结报告",
+      "main_assignee": "thinker",
+      "collaborators": "leader,executor",
+      "status": "completed",
+      "assigned_at": "2026-01-31T23:24:27Z"
+    },
+    {
+      "id": "simulated-task-20260201-073027",
+      "title": "模拟任务：制定创新项目风险评估模板",
+      "main_assignee": "thinker",
+      "collaborators": "leader,executor",
+      "status": "assigned",
+      "assigned_at": "2026-01-31T23:31:35Z"
+    },
+    {
+      "id": "实际任务-优化Clawdbot配置",
+      "title": "实际任务：优化Clawdbot多实例配置",
+      "main_assignee": "thinker",
+      "collaborators": "leader,executor",
+      "status": "assigned",
+      "assigned_at": "2026-01-31T23:31:35Z"
+    }
+  ],
+  "task_history": [
+    {
+      "id": "test-task-001",
+      "completed_at": "2026-01-31T23:24:39Z"
+    }
+  ],
+  "last_updated": "2026-01-31T23:31:35Z"
+}

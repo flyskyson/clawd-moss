@@ -1,0 +1,8 @@
+{
+  "schedule": "0 0 * * *",
+  "script": "/Users/lijian/clawd/scripts/组长轮换系统.sh",
+  "description": "每日组长轮换和议题生成",
+  "enabled": true,
+  "notify": true,
+  "log_file": "/Users/lijian/clawd/logs/rotation-$(date +\%Y\%m\%d).log"
+}

@@ -1,0 +1,19 @@
+{
+  "task_id": "实际任务-优化Clawdbot配置",
+  "task_title": "实际任务：优化Clawdbot多实例配置",
+  "task_file": "tasks/实际任务-优化Clawdbot配置.md",
+  "main_assignee": "thinker",
+  "collaborators": "leader,executor",
+  "priority": "中",
+  "deadline": "未指定",
+  "status": "assigned",
+  "assigned_at": "2026-01-31T23:31:35Z",
+  "progress": 25,
+  "updates": [
+    {
+      "timestamp": "2026-01-31T23:31:41Z",
+      "progress": 25,
+      "message": "任务已分配，哲思者开始分析问题根本原因，领航者制定优化策略"
+    }
+  ]
+}
