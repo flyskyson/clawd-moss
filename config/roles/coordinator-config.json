@@ -46,7 +46,10 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "deepseek/deepseek-coder"
+        "primary": "deepseek/deepseek-coder",
+        "fallbacks": [
+          "deepseek/deepseek-chat"
+        ]
       },
       "workspace": "/Users/lijian/clawd/workspaces/coordinator",
       "compaction": {
@@ -86,7 +89,7 @@
     "bind": "loopback",
     "auth": {
       "mode": "token",
-      "token": "f25b9de155ed0fb20f99c376"
+      "token": "c230d8dc744c5061de5bf59f"
     }
   }
 }

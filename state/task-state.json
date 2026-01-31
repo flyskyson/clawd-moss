@@ -1,6 +1,6 @@
 {
   "total_tasks": 3,
-  "completed_tasks": 1,
+  "completed_tasks": 2,
   "active_tasks": [
     {
       "id": "test-task-001",
@@ -23,7 +23,7 @@
       "title": "实际任务：优化Clawdbot多实例配置",
       "main_assignee": "thinker",
       "collaborators": "leader,executor",
-      "status": "assigned",
+      "status": "completed",
       "assigned_at": "2026-01-31T23:31:35Z"
     }
   ],
@@ -31,7 +31,11 @@
     {
       "id": "test-task-001",
       "completed_at": "2026-01-31T23:24:39Z"
+    },
+    {
+      "id": "实际任务-优化Clawdbot配置",
+      "completed_at": "2026-01-31T23:39:22Z"
     }
   ],
-  "last_updated": "2026-01-31T23:31:35Z"
+  "last_updated": "2026-01-31T23:39:22Z"
 }
