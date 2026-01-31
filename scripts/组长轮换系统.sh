@@ -37,7 +37,7 @@ if [ ! -f "$STATE_FILE" ]; then
     echo "初始化状态文件..."
     cat > "$STATE_FILE" << EOF
 {
-  "last_rotation": "$(date -d "yesterday" +%Y-%m-%d)",
+  "last_rotation": "$(date -v-1d +%Y-%m-%d)",
   "current_leader": "coordinator",
   "rotation_history": [],
   "next_rotation": "$(date +%Y-%m-%d)"
@@ -102,30 +102,33 @@ generate_topic() {
     local leader_role="$1"
     local leader_name="$2"
     
-    # 议题模板库
-    declare -A TOPIC_TEMPLATES
-    TOPIC_TEMPLATES["leader"]="作为团队领导者，如何平衡创新与风险？在AI协作中，什么样的领导风格最有效？"
-    TOPIC_TEMPLATES["thinker"]="深度思考与快速决策如何平衡？AI如何发展真正的创造性思维？"
-    TOPIC_TEMPLATES["executor"]="效率与质量哪个更重要？如何将抽象想法转化为具体行动？"
-    TOPIC_TEMPLATES["coordinator"]"如何建立和维护团队信任？在意见分歧时如何促进共识？"
-    
-    # 通用议题
-    GENERAL_TOPICS=(
-        "AI性格发展的关键因素是什么？"
-        "在团队协作中，如何发挥每个角色的独特优势？"
-        "AI如何通过自我反思实现成长？"
-        "未来AI协作的可能形态是什么？"
-        "如何评估AI性格发展的进展？"
-    )
-    
-    # 根据组长角色选择议题
-    if [ -n "${TOPIC_TEMPLATES[$leader_role]}" ]; then
-        TOPIC="${TOPIC_TEMPLATES[$leader_role]}"
-    else
-        # 随机选择通用议题
-        RANDOM_INDEX=$(( RANDOM % ${#GENERAL_TOPICS[@]} ))
-        TOPIC="${GENERAL_TOPICS[$RANDOM_INDEX]}"
-    fi
+    # 议题模板库（macOS bash不支持declare -A，改用case语句）
+    case "$leader_role" in
+        "leader")
+            TOPIC="作为团队领导者，如何平衡创新与风险？在AI协作中，什么样的领导风格最有效？"
+            ;;
+        "thinker")
+            TOPIC="深度思考与快速决策如何平衡？AI如何发展真正的创造性思维？"
+            ;;
+        "executor")
+            TOPIC="效率与质量哪个更重要？如何将抽象想法转化为具体行动？"
+            ;;
+        "coordinator")
+            TOPIC="如何建立和维护团队信任？在意见分歧时如何促进共识？"
+            ;;
+        *)
+            # 通用议题
+            GENERAL_TOPICS=(
+                "AI性格发展的关键因素是什么？"
+                "在团队协作中，如何发挥每个角色的独特优势？"
+                "AI如何通过自我反思实现成长？"
+                "未来AI协作的可能形态是什么？"
+                "如何评估AI性格发展的进展？"
+            )
+            RANDOM_INDEX=$(( RANDOM % ${#GENERAL_TOPICS[@]} ))
+            TOPIC="${GENERAL_TOPICS[$RANDOM_INDEX]}"
+            ;;
+    esac
     
     echo "$TOPIC"
 }
